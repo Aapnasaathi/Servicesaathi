@@ -9,12 +9,43 @@
 </head>
 <body>
   <header>
-    <h1>Welcome to ServiceSaathi</h1>
-    <p>Your Local Service Helper Platform</p>
+    <h1>ServiceSaathi</h1>
+    <p>Your Local Service Marketplace</p>
   </header>
   <main>
-    <a href="register.html" class="btn">Become a Helper</a>
-    <p>Contact us on WhatsApp or book a service from the home page.</p>
+    <!-- Service Listing -->
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="service-card" onclick="sendWhatsApp('Plumber')">
+        <h3>Plumber</h3>
+        <p>Rate: ₹200</p>
+      </div>
+      <div class="service-card" onclick="sendWhatsApp('Electrician')">
+        <h3>Electrician</h3>
+        <p>Rate: ₹200</p>
+      </div>
+      <div class="service-card" onclick="sendWhatsApp('Painter')">
+        <h3>Painter</h3>
+        <p>Rate: ₹200</p>
+      </div>
+      <!-- You can add more service-cards here -->
+    </section>
+
+    <!-- Booking Form -->
+    <section id="booking">
+      <h2>Book a Service</h2>
+      <form id="bookingForm" onsubmit="handleBooking(event)">
+        <label>Your Name:<input type="text" id="userName" required /></label>
+        <label>Contact Number:<input type="tel" id="userContact" required /></label>
+        <label>Service Required:<input type="text" id="serviceRequired" required /></label>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <!-- Link to register as provider -->
+    <section id="provider">
+      <p>Are you a service provider? <a href="register.html">Register here</a></p>
+    </section>
   </main>
 </body>
 </html>
